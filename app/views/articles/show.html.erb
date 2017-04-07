@@ -1,5 +1,17 @@
-
-<h1><%= @article.title %></h1>
-<div>
-	<p><%= @article.body %></p>
+<div class="container">
+	<h1><%= @article.title %></h1>
+	<div>
+		<p><%= @article.body %></p>
+	</div>
 </div>
+
+<div class="container">
+	<div class="btn btn-default ">
+		<%= link_to "Regresar", articles_path  %>
+	</div>
+
+	<div class="btn btn-default ">
+		<%= link_to "Editar", edit_article_path(@article)  %>
+	</div>
+</div>
+

@@ -1,8 +1,27 @@
 
-<% @articles.each do |article| %>
-	<h1><%= article.title %></h1>
-	<div>
-		<%= article.body %> <%= link_to "Eliminar", article, method: :delete %>
-	</div>
+<div class="container">
+	<div class="form-group">
+		
+		<% @articles.each do |article| %>
+		<h1><%= article.title %></h1>
+		<div>
+			<%= article.body %> 
+			<%= link_to "Eliminar", article, method: :delete %>
+			<%= link_to "Mostrar", article_path(article)  %>
+			<%= link_to "Editar", edit_article_path(article)  %>
+			
+		</div>
 
-<% end %>
+	<% end %>
+	</div>
+	
+</div>
+
+
+	<div class="container">
+		<div class="btn btn-default ">
+		<%= link_to "Crear", new_article_path  %>
+		</div>
+	</div>
+	
+
